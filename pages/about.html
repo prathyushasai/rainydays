@@ -1,0 +1,225 @@
+<!DOCTYPE html">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PC | About Me</title>
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans|Zeyada' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC" />
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Forum" />
+
+<style type="text/css">
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+body { 
+    background-image: url(../images/about1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center; 
+    position: fixed;
+}
+
+/* Navigation Bar*/
+#wrapper {
+  width:100%;
+  margin:0 auto;
+  list-style:none;
+  position: fixed;
+  z-index: 9999;
+  min-width: 2000px;
+  overflow: auto;
+}
+#main-nav {
+  /*margin-top: 40px;*/
+  width: 100%;
+  z-index: 1000;
+  /*box-shadow: 0 0 10px #000;*/
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.45);
+  float: right;
+}
+#name {
+  float: left;
+  padding-top: 10px;
+  font-family: IM Fell French Canon SC;/*'Droid Sans', sans-serif;*/
+  font-size: 2em;
+  font-weight: bold;
+  list-style: none;
+  padding-left: 3px;
+  color: rgba(255,255,255, 0.75);
+  text-shadow: 0 1px 1px #000;
+}
+#main-nav ul {
+  font-family: IM Fell French Canon SC;/*'Droid Sans', sans-serif;*/
+  font-size: 1.3em;
+  font-weight: bold;
+  list-style: none;
+}
+#main-nav ul li {
+  border-left: 1px outset;
+  border-color: rgba(255,255,255, 0.20);
+  float: left;
+}
+#main-nav ul li:first-child {
+  border: none;
+}
+#main-nav ul li a {
+  color: #000;
+  display: block;
+  padding: 20px;
+  position: relative;
+  width: 131.2px;
+  text-decoration: none;
+  text-shadow: 0 1px 1px #000;
+  color: rgba(255,255,255, 0.75);
+}
+#main-nav ul li a span.drop-down {
+  background: url(images/down-arrow_green_10x7.png) no-repeat;
+  height: 7px;
+  position: absolute;
+  right: 20px;
+  top: 24px;
+  width: 10px;
+}
+#main-nav ul li:hover {
+  background: rgba(0,0,0,0.75);
+}
+
+/* Create Sections */
+.section {
+    width: 100%;
+    min-height: 100%;
+    padding-top: 115px;
+    position: relative;
+    overflow-x: auto;
+}
+/* About Me. */
+/* Description. */
+section.box2 {
+  width: 580px;
+  height: 525px;
+  margin-right:auto;
+  background-position: center;
+  /*margin-top: 13px;*/
+  margin-bottom: 40px;
+  position: fixed;
+  margin-left: 535px;
+  /*Comfortaa, Alice, Lancelot, Forum*/
+  font-family: Forum;
+
+}
+article {
+  clear: both;
+  overflow: auto;
+  width: 100%;
+}
+hgroup {
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Picture Changing Hexagon. */
+section.box {
+  background-color: rgba(5,4,2,0.5);
+  width: 1000px;
+  height: 525px; /*500 - touches nav bar*/
+  margin-left:140px;
+  margin-right:auto;
+  background-position: center;
+  margin-bottom: 40px;
+  position: fixed;
+}
+#hex {
+  margin-left: 30px;
+  display:flex;
+  align-items:center;
+  display: inline-block;
+}
+.hexagon {
+    overflow: hidden;
+    visibility: hidden;
+    -webkit-transform: rotate(120deg);
+       -moz-transform: rotate(120deg);
+        -ms-transform: rotate(120deg);
+         -o-transform: rotate(120deg);
+            transform: rotate(120deg);
+    /*cursor: pointer;*/
+    }
+.hexagon-in1 {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: rotate(-60deg);
+       -moz-transform: rotate(-60deg);
+        -ms-transform: rotate(-60deg);
+         -o-transform: rotate(-60deg);
+            transform: rotate(-60deg);
+    }
+.hexagon-in2 {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-image: url(../images/self.jpg);
+    background-size: 118% auto;
+    visibility: visible;
+    -webkit-transform: rotate(-60deg);
+       -moz-transform: rotate(-60deg);
+        -ms-transform: rotate(-60deg);
+         -o-transform: rotate(-60deg);
+            transform: rotate(-60deg);
+    }
+.hexagon-in2:hover {
+    background-image: url(../images/IMG_4771.JPG);
+    background-size: 154% auto;
+    }
+.hexagon2 {
+    width: 350px;
+    height: 700px;
+    margin: -80px 0 0 20px;
+    }
+</style>
+
+</head>
+
+<body>
+<div id="wrapper">
+    <div id="main-nav">
+    <div id ="name">&nbsp;Prathyusha Charagondla&nbsp;</div>
+      <ul>
+        <li><a href=../index.html>Home</a></li>
+        <li><a href=about.html>About</a></li>
+        <li><a href="http://bit.ly/2otgPbD" target="_blank">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href=contact.html>Contact Me</a></li>
+      </ul>
+    </div>
+</div>
+<article>
+<section class = "section">
+  <section class="box">
+      <div id= hex > <div class="hexagon hexagon2"><div class="hexagon-in1"><div class="hexagon-in2"></div></div></div> </div>
+    </section>
+    <section class="box2">
+      <hgroup>
+        <h2 style="padding-bottom: 15px;padding-left: 50px;
+        float: center;color:#fff;text-shadow: 0 1px 1px #000;
+        font-size: 1.8em">About Me</h2>
+      </hgroup>
+        <p style="float:right; color:#fff;display: inline-block;
+        margin-left: 30px;line-height: 25px;">Hi! My name is Prathyusha Charagondla! I am a second year Computer Science major at UC Berkeley. I have a vested interest in Data Science and Machine Learning and am pursuing this interest both in academia and outside. Check out my <a href=projects.html style="color: white";>projects</a> for more of my pursuits! 
+        <br /><br />
+        Outside of academia, I am involved with the corporate and industrial relations side of Society for Women Engineers and ANova, a Computer Science Education club focused on educated students from underresourced communities. Check out my <a href=http://bit.ly/2opotzM style="color: white";>resume</a> for more details!
+        <br /><br />
+        My hobbies are dancing an Indian Classical Dance called Kuchipudi, playing the piano and practicing yoga. I also love learning new languages - whether they are foreign languages or programming languages and traveling and exploring new cultures and countries. I am currently learning my 4th language - Chinese! I have so far visited 8 different countries including Singapore, Saudi Arabia and France. However, I hope to reach my lofty goal of visiting 50 someday. Click on my photo to see all the places I've visited!</p>    
+  </section>
+</section>
+</article>
+<!--div id="div1">
+<p><br /><br /><br /><br />Made with &#10084; by Prathyusha Charagondla</a></p>
+</div-->
+</body>
+</html>
