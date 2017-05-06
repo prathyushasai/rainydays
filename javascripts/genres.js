@@ -28,7 +28,7 @@ var TxtType = function(el, toRotate, period) {
 
         if (!this.isDeleting 
             && this.txt === fullTxt 
-            && this.txt !== "Projects.") {
+            && this.txt !== "Novels.") {
             delta = this.period;
             this.isDeleting = true;
         } else if (this.isDeleting && this.txt === '') {
@@ -53,6 +53,6 @@ window.onload = function() {
     // INJECT CSS
     var css = document.createElement("style");
     css.type = "text/css";
-    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #000}";
+    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #4E6537; opacity:0.5;";
     document.body.appendChild(css);
 };
