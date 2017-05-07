@@ -5,15 +5,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Contact Me</title>
 </head>
-<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC" />
-<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Dosis|Sacramento|Nunito" rel="stylesheet">
 <style type="text/css">
 * {
   margin: 0;
   padding: 0;
 }
 body {
-    background: url(../images/ocean.jpg) no-repeat center center fixed; 
+    background: url(../images/background1.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -41,15 +40,17 @@ body {
   text-align: center;
   background-color: rgba(255,255,255, 0.45);
   float: right;
-  font-family: IM Fell French Canon SC;
 }
 #name {
   float: left;
-  padding-top: 10px;
-  font-size: 2em;
+  padding-top:2px;
+  padding-bottom: 2px;
+  font-family: Sacramento;
+  font-size: 2.75em;
   font-weight: bold;
   list-style: none;
-  padding-left: 3px;
+  padding-left: 30px;
+  padding-right: 90px;
   color: rgba(0,0,0, 0.75);
   text-shadow: 0 1px 1px #fff;
 }
@@ -62,12 +63,15 @@ body {
   text-decoration: none;
   text-shadow: 0 1px 1px #000;
   color: rgba(255,255,255, 0.75);
+  font-family: Dosis;
 }
 #main-nav a:first-child {
   border: none;
 }
 #main-nav a:hover {
-  background: gray;
+  background: rgba(255,255,255, 0.1);
+  color:white;
+  text-shadow:none;
 }
 #main-nav ul {
   font-size: 1.3em;
@@ -99,17 +103,15 @@ body {
 /* Contact Form. */
 /* Create Box to contain form. */
 #box {
-    margin-top: 120px;
+    position: absolute; /* or absolute */
+    top: 110px;
+    left: 30%;
     background-color: #ffffff;
     border-radius: 25px;
     border: 2px solid black;
     opacity: 0.8;
-    margin-right: 500px;
-    margin-left: 100px;
     padding-bottom: 50px;
     padding: 15px 15px 15px 15px;
-    position: absolute; 
-    top: 50%;
 }
 /* Center the form */
 form {
@@ -139,8 +141,6 @@ input:focus, textarea:focus {
 }
 /* Submit Button.*/
 #submit {
-    /*width:127px;
-    height:38px;*/
     width:150px;
     height:auto;
     background:url(../images/submitA.png);
@@ -158,30 +158,6 @@ input:focus, textarea:focus {
     background-size: contain; 
 }
 
-/* Social Media Hexagons. */
-.icon {
-    filter: opacity(75%);
-    float: right;
-    position: absolute;
-    max-width:25%;
-    max-height:25%;
-}
-.icon:hover {
-    filter: none;
-    cursor: pointer;
-}
-#github {
-    top: 23%;
-    right: 30%;
-}
-#linkedin {
-    bottom: 30%;
-    right: 15%
-}
-#twitter {
-    bottom: 10%;
-    right: 30%;
-}
 </style>
 <body>
 <!-- Navigation Bar. -->
@@ -207,22 +183,14 @@ input:focus, textarea:focus {
         <p style="font-family: Nunito;">Message </p><textarea name="message" placeholder="Type Here"></textarea><br/>
         <input id="submit" type="submit" value="Send">
         <input type="text" name="_gotcha" style="display:none" />
-        <input type="hidden" name="_next" value="https://prathyushasai.github.io/pages/thanks.html" />
+        <input type="hidden" name="_next" value="https://prathyushasai.github.io/rainydays/pages/thanks.html" />
     </form>
     <script>
         var contactform =  document.getElementById('contact');
-        contactform.setAttribute('action', '//formspree.io/' + 'prathyushawe' + '@' + 'gmail' + '.' + 'com');
+        contactform.setAttribute('action', '//formspree.io/' + 'purple'+ '.' + 'angel' + '135' + '@' + 'gmail' + '.' + 'com');
     </script>
 </section>
 </article>
-<aside>
-    <a href="https://github.com/prathyushasai" target="_blank">
-    <img src="../images/contacts_hex/g1.png" class="icon" id="github"></a>
-    <a href="https://www.linkedin.com/in/pcharagondla/" target="_blank">
-    <img src="../images/contacts_hex/l1.png" class="icon" id="linkedin"></a>
-    <a href="https://twitter.com/pcharagondla" target="_blank">
-    <img src="../images/contacts_hex/t1.png" class="icon" id="twitter"></a>
-</aside>
 </body>
 
 </html>
