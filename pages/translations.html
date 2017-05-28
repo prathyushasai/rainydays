@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Contact Me</title>
 </head>
-<link href="https://fonts.googleapis.com/css?family=Dosis|Sacramento|Nunito" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Dosis|Sacramento|Nunito|Metamorphous" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
 
@@ -76,6 +76,11 @@ body {
   color:white;
   text-shadow:none;
 }
+#main-nav ul li a.active-page{
+  background: black;
+  color:white;
+  text-shadow:none;
+}
 #main-nav ul {
   font-size: 1.3em;
   font-weight: bold;
@@ -103,18 +108,21 @@ body {
   background: rgba(0,0,0,0.75);
 }
 
+/* Translation Cards. */
 .card {
-  width: 100px;
-  height: 100px;
+  width: 550px;
+  height: 380px;
   margin: 20px;
-  margin-top: 200px;
-  margin-left: 250px;
+  margin-top: 30px;
+  margin-left: 400px;
   display: inline-block;
 }
 
 .front, .back {
   border: 2px gray solid;
   padding: 10px;
+  font-family: Nunito;
+  font-size: 0.95em;
 }
 .front {
   background-color: #ccc;
@@ -132,21 +140,59 @@ body {
       <ul>
         <li><a href=../index.html>Home</a></li>
         <li><a href=../index.html#about>About</a></li>
-        <li><a href=translations.html>Translations</a></li>
+        <li><a href=translations.html class='active-page'>Translations</a></li>
         <li><a href="novels.html">Novels</a></li>
         <li><a href=contact.html>Contact Me</a></li>
       </ul>
     </div>
 </div>
 
+<!-- Note. -->
+<p style="font-family: Metamorphous; padding-top: 100px; margin-left:15%; margin-right: 10%; font-size: 1em; color: white">Hello! I'm an amateur translator and a Chinese learner. I am translating to aid my learning. I am by no means translating any of these novels as of now nor am I the author. Please do keep in mind that I do make mistakes.<br><br>Hover over the cards below to read the translated version.</p>
+
 <!-- Translations Gallery. -->
   <div id="card-1" class="card">
     <div class="front">
-        Novel: Chongfei Manual
-        Author: TR
+        <b>Novel:</b> Chongfei Manual (宠妃使用手册)<br>
+        <b>Author:</b> 风荷游月
+
+        <br><br>
+        <b>Chapter 82 - Author's Note</b>
+        <br><br>
+        作者有话要说： 
+        <br><br>
+        宋晖：我很温柔，成亲后会对你很好，阿箩妹妹，不要嫁给他，嫁给我吧！
+        <br><br>
+        李颂：我只喜欢你一个人，嫁给我。
+        <br><br>
+        赵玠：我有钱。
+        <br><br>
+        宋晖&李颂：…… 
+        <br><br>
+        赵玠：我让你当皇后。
+        <br><br>
+        后来，阿箩觉得靖宝宝太庸俗，拒绝了他。
     </div>
     <div class="back">
-        Back
+        <b>Novel:</b> Chongfei Manual (宠妃使用手册)<br>
+        <b>Author:</b> 风荷游月
+
+        <br><br>
+        <b>Chapter 82 - Author's Note</b>
+        <br><br>
+        The author has something to say:
+        <br><br>
+        Song Hui: I am very gentle. If you marry me, I will treat you well, Little Sister Ah Luo! Don’t marry him, marry me!
+        <br><br>
+        Li Song: I will only like you alone. Marry me!
+        <br><br>
+        Zhao Jie: I am wealthy.
+        <br><br>
+        Song Hui & Li Song: ……
+        <br><br>
+        Zhao Jie: I will make you Empress.
+        <br><br>
+        Afterwards, Ah Luo thought that Jing Baby was too vulgar and rejected him.
     </div>
   </div>
 <!-- 
