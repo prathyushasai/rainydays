@@ -1,0 +1,271 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Contact Me</title>
+</head>
+<link href="https://fonts.googleapis.com/css?family=Dosis|Sacramento|Nunito" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+
+<style type="text/css">
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+    /*background: url(../img/background1.jpg) no-repeat center center fixed; */
+    background-color: black;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;    
+}
+
+/* Create Sections. */
+.section {
+    width: 100%;
+    position: relative;
+}
+
+/* Navigation Bar. */
+#wrapper {
+  width:100%;
+  margin:0 auto;
+  list-style:none;
+  position: fixed;
+  z-index: 9999;
+}
+#main-nav {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  text-align: center;
+  background-color: rgba(255,255,255, 0.45);
+  float: right;
+}
+#name {
+  float: left;
+  padding-top:2px;
+  padding-bottom: 2px;
+  font-family: Sacramento;
+  font-size: 2.75em;
+  list-style: none;
+  padding-left: 30px;
+  padding-right: 90px;
+  color: rgba(0,0,0, 0.75);
+  text-shadow: 0 1px 1px #fff;
+}
+#main-nav a {
+  color: #000;
+  display: block;
+  padding: 20px;
+  position: relative;
+  width: 125px;
+  text-decoration: none;
+  text-shadow: 0 1px 1px #000;
+  color: rgba(255,255,255, 0.75);
+  font-family: Dosis;
+}
+#main-nav a:first-child {
+  border: none;
+}
+#main-nav a:hover {
+  background: rgba(255,255,255, 0.1);
+  color:white;
+  text-shadow:none;
+}
+#main-nav ul {
+  font-size: 1.3em;
+  font-weight: bold;
+  list-style: none;
+}
+#main-nav ul li {
+  border-left: 1px outset;
+  border-color: rgba(0,0,0, 0.20);
+  float: left;
+}
+#main-nav ul li:first-child {
+  border: none;
+}
+#main-nav ul li a {
+  color: #000;
+  display: block;
+  padding: 20px;
+  position: relative;
+  width: 125px;
+  text-decoration: none;
+  text-shadow: 0 1px 1px #fff;
+  color: rgba(0,0,0, 0.75);
+}
+#main-nav ul li:hover {
+  background: rgba(0,0,0,0.75);
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  margin-top: 200px;
+  margin-left: 250px;
+  display: inline-block;
+}
+
+.front, .back {
+  border: 2px gray solid;
+  padding: 10px;
+}
+.front {
+  background-color: #ccc;
+}
+.back {
+  background-color: white;
+}
+
+</style>
+<body>
+<!-- Navigation Bar. -->
+<div id="wrapper">
+    <div id="main-nav">
+    <div id ="name">&nbsp;rainydays&nbsp;</div>
+      <ul>
+        <li><a href=../index.html>Home</a></li>
+        <li><a href=../index.html#about>About</a></li>
+        <li><a href=translations.html>Translations</a></li>
+        <li><a href="novels.html">Novels</a></li>
+        <li><a href=contact.html>Contact Me</a></li>
+      </ul>
+    </div>
+</div>
+
+<!-- Translations Gallery. -->
+  <div id="card-1" class="card">
+    <div class="front">
+        Novel: Chongfei Manual
+        Author: TR
+    </div>
+    <div class="back">
+        Back
+    </div>
+  </div>
+<!-- 
+    <div id="card-2" class="card">
+      <div class="front">
+          Front
+      </div>
+      <div class="back">
+          Back
+      </div> 
+    </div>
+
+    <div class="card">
+      <div class="front">
+          Front
+      </div>
+      <div class="back">
+          Back
+      </div> 
+    </div>
+
+    <div class="card">
+      <div class="front">
+          Front
+      </div>
+      <div class="back">
+          Back
+      </div> 
+    </div>
+
+    <div class="card">
+      <div class="front">
+          Front
+      </div>
+      <div class="back">
+          Back
+      </div> 
+    </div>
+
+    <div class="card">
+      <div class="front">
+          Front
+      </div>
+      <div class="back">
+          Back
+      </div> 
+    </div>
+
+    <div class="card">
+      <div class="front">
+          Front
+      </div>
+      <div class="back">
+          Back
+      </div> 
+    </div>
+
+    <div class="card">
+      <div class="front">
+          Front
+      </div>
+      <div class="back">
+          Back
+      </div> 
+    </div>
+
+    <div class="card">
+      <div class="front">
+          Front
+      </div>
+      <div class="back">
+          Back
+      </div> 
+    </div>
+
+    <div class="card">
+      <div class="front">
+          Front
+      </div>
+      <div class="back">
+          Back
+      </div> 
+    </div>
+
+    <div class="card">
+      <div class="front">
+          Front
+      </div>
+      <div class="back">
+          Back
+      </div> 
+    </div>
+
+    <div class="card">
+      <div class="front">
+          Front
+      </div>
+      <div class="back">
+          Back
+      </div> 
+    </div>
+
+    <div class="card">
+      <div class="front">
+          Front
+      </div>
+      <div class="back">
+          Back
+      </div>  -->
+<!-- Script to turn the Cards. -->
+<script type="text/javascript">
+  $(function(){
+    $(".card").flip({
+      axis: 'y',
+      trigger: "hover"
+    });
+  });  
+</script>
+
+</body>
+
+</html>
