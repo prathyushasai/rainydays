@@ -6,6 +6,7 @@
 <title>Contact Me</title>
 </head>
 <link href="https://fonts.googleapis.com/css?family=Dosis|Sacramento|Nunito|Metamorphous" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../css/translations.css">
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
 
@@ -15,18 +16,18 @@
   padding: 0;
 }
 body {
-    /*background: url(../img/background1.jpg) no-repeat center center fixed; */
-    background-color: black;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;    
+  /*background: url(../img/background1.jpg) no-repeat center center fixed; */
+  background-color: white;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;    
 }
 
 /* Create Sections. */
 .section {
-    width: 100%;
-    position: relative;
+  width: 100%;
+  position: relative;
 }
 
 /* Navigation Bar. */
@@ -42,7 +43,7 @@ body {
   width: 100%;
   z-index: 1000;
   text-align: center;
-  background-color: rgba(255,255,255, 0.45);
+  background-color: rgba(0,0,0, 1);
   float: right;
 }
 #name {
@@ -54,8 +55,8 @@ body {
   list-style: none;
   padding-left: 30px;
   padding-right: 90px;
-  color: rgba(0,0,0, 0.75);
-  text-shadow: 0 1px 1px #fff;
+  color: rgba(255, 66, 119, 0.75);
+  text-shadow: 0 1px 1px #000;
 }
 #main-nav a {
   color: #000;
@@ -64,8 +65,8 @@ body {
   position: relative;
   width: 125px;
   text-decoration: none;
-  text-shadow: 0 1px 1px #000;
-  color: rgba(255,255,255, 0.75);
+  text-shadow: 0 1px 1px #fff;
+  color: rgba(0,0,0, 0.75);
   font-family: Dosis;
 }
 #main-nav a:first-child {
@@ -77,8 +78,8 @@ body {
   text-shadow:none;
 }
 #main-nav ul li a.active-page{
-  background: black;
-  color:white;
+  background: rgba(255,255,255,.3);
+  color:rgba(255, 66, 119, 0.85);
   text-shadow:none;
 }
 #main-nav ul {
@@ -91,9 +92,6 @@ body {
   border-color: rgba(0,0,0, 0.20);
   float: left;
 }
-#main-nav ul li:first-child {
-  border: none;
-}
 #main-nav ul li a {
   color: #000;
   display: block;
@@ -101,37 +99,89 @@ body {
   position: relative;
   width: 125px;
   text-decoration: none;
-  text-shadow: 0 1px 1px #fff;
-  color: rgba(0,0,0, 0.75);
+  text-shadow: 0 1px 1px #000;
+  color: rgba(255, 66, 119, 0.85);
 }
-#main-nav ul li:hover {
-  background: rgba(0,0,0,0.75);
+
+/* Card Navigation Bar. */
+div.bar {
+  margin-top: 68.4px;
+  height: 100%;
+  width:20.7%;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  float: left;
+  /*border: 1px solid #ccc;*/
+  background-color: #f1f1f1;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  /*padding-top: 60px;  Place content 60px from the top */
+}
+
+/* Buttons in NavBar. */
+div.bar button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding-right: 10px;
+  padding-left: 10px;
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+div.bar button:hover {
+  background-color: #ddd;
+}
+
+div.bar button.active {
+  background-color: #fff; /*ccc*/
 }
 
 /* Translation Cards. */
 .card {
-  width: 550px;
-  height: 380px;
-  margin: 20px;
-  margin-top: 30px;
-  margin-left: 400px;
-  display: inline-block;
+  margin-top: 68.4px;
+  height: 100%;
+  width: 79.3%;
+  color: white;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  float: right;
+  font-family: Nunito;  
+  color:black;   
 }
 
-.front, .back {
-  border: 2px gray solid;
-  padding: 10px;
-  font-family: Nunito;
-  font-size: 0.95em;
+.transl {
+  margin: 5% 15% auto 15%;
 }
-.front {
-  background-color: #ccc;
-}
-.back {
-  background-color: white;
-}
-
 </style>
+<script>
+  /* Default Settings. */
+  window.onload = function () {
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+  };
+  
+  /* Changing the tab. */
+  function openTab(evt, translation) {
+    var i, card, links;
+    card = document.getElementsByClassName("card");
+    for (i = 0; i < card.length; i++) {
+        card[i].style.display = "none";
+    }
+    links = document.getElementsByClassName("links");
+    for (i = 0; i < links.length; i++) {
+        links[i].className = links[i].className.replace(" active", "");
+    }
+    document.getElementById(translation).style.display = "block";
+    evt.currentTarget.className += " active";
+  } 
+
+</script>
 <body>
 <!-- Navigation Bar. -->
 <div id="wrapper">
@@ -147,161 +197,64 @@ body {
     </div>
 </div>
 
-<!-- Note. -->
-<p style="font-family: Metamorphous; padding-top: 100px; margin-left:15%; margin-right: 10%; font-size: 1em; color: white">Hello! I'm an amateur translator and a Chinese learner. I am translating to aid my learning. I am by no means translating any of these novels as of now nor am I the author. Please do keep in mind that I do make mistakes.<br><br>Hover over the cards below to read the translated version.</p>
+<!-- Card Navigation Bar. -->
+<div class="bar">
+  <button class="links" id="defaultOpen" onclick="openTab(event, 'Home')"><center>Home</center></button>
+  <button class="links" onclick="openTab(event, 'cfm82')">Chongfei Manual<br>Ch. 82 Author's Note</button>
+</div>
+
 
 <!-- Translations Gallery. -->
-  <div id="card-1" class="card">
-    <div class="front">
-        <b>Novel:</b> Chongfei Manual (宠妃使用手册)<br>
-        <b>Author:</b> 风荷游月
+  <!-- Home. -->
+<div id="Home" class="card">
+  <!-- <h3>London</h3> -->
+  <p style="font-family: Metamorphous; padding-top: 100px; margin-left:15%; margin-right: 10%; font-size: 1em;">Select from the options on the left to read the English and Chinese version.<br><br>Note: <br>I'm an amateur translator and a Chinese learner. I am translating to aid my learning. I am by no means translating any of these novels as of now nor am I the author. Please do keep in mind that I do make mistakes. Thank you! Please enjoy!</p>
+</div>
 
-        <br><br>
-        <b>Chapter 82 - Author's Note</b>
-        <br><br>
-        作者有话要说： 
-        <br><br>
-        宋晖：我很温柔，成亲后会对你很好，阿箩妹妹，不要嫁给他，嫁给我吧！
-        <br><br>
-        李颂：我只喜欢你一个人，嫁给我。
-        <br><br>
-        赵玠：我有钱。
-        <br><br>
-        宋晖&李颂：…… 
-        <br><br>
-        赵玠：我让你当皇后。
-        <br><br>
-        后来，阿箩觉得靖宝宝太庸俗，拒绝了他。
-    </div>
-    <div class="back">
-        <b>Novel:</b> Chongfei Manual (宠妃使用手册)<br>
-        <b>Author:</b> 风荷游月
-
-        <br><br>
-        <b>Chapter 82 - Author's Note</b>
-        <br><br>
-        The author has something to say:
-        <br><br>
-        Song Hui: I am very gentle. If you marry me, I will treat you well, Little Sister Ah Luo! Don’t marry him, marry me!
-        <br><br>
-        Li Song: I will only like you alone. Marry me!
-        <br><br>
-        Zhao Jie: I am wealthy.
-        <br><br>
-        Song Hui & Li Song: ……
-        <br><br>
-        Zhao Jie: I can make you Empress.
-        <br><br>
-        Afterwards, Ah Luo thought that Jing Baby was too vulgar and rejected him.
-    </div>
+<!-- Chongfei Manual Ch. 82 -->
+<div id="cfm82" class="card">
+  <div class="transl">
+    <b>Novel:</b> Chongfei Manual (宠妃使用手册)<br>
+    <b>Author:</b> 风荷游月
+    <br><br><br>
+    <b>Chapter 82 - Author's Note</b>**
+    <br><br>    
+    <u>En</u>g<u>lish:</u>
+    <br>
+    The author has something to say:
+    <br><br>
+    Song Hui: I am very gentle. If you marry me, I will treat you well, Little Sister Ah Luo!<br>Don’t marry him, marry me!
+    <br><br>
+    Li Song: I will only like you alone. Marry me!
+    <br><br>
+    Zhao Jie: I am wealthy.
+    <br><br>
+    Song Hui & Li Song: ……
+    <br><br>
+    Zhao Jie: I can make you Empress.
+    <br><br>
+    Afterwards, Ah Luo thought that Jing Baby was too vulgar and rejected him.
+    <br><br>
+    **<i>Additional Note: For those of you who have yet to read Chongfei Manual (or in the process of reading it), Ah Luo is Wei Luo (the female protagonist). The others - Song Hui, Li Song and Zhao Jie (aka Jing Baby) are vying for her love. As for who she ends up with ...</i> ¯\_(ツ)_/¯
+    <br><br><br><br>
+    <u>Chinese:</u>
+    <br>
+    作者有话要说： 
+    <br><br>
+    宋晖：我很温柔，成亲后会对你很好，阿箩妹妹，不要嫁给他，嫁给我吧！
+    <br><br>
+    李颂：我只喜欢你一个人，嫁给我。
+    <br><br>
+    赵玠：我有钱。
+    <br><br>
+    宋晖&李颂：…… 
+    <br><br>
+    赵玠：我让你当皇后。
+    <br><br>
+    后来，阿箩觉得靖宝宝太庸俗，拒绝了他。
+    <br><br><br><br>
   </div>
-<!-- 
-    <div id="card-2" class="card">
-      <div class="front">
-          Front
-      </div>
-      <div class="back">
-          Back
-      </div> 
-    </div>
-
-    <div class="card">
-      <div class="front">
-          Front
-      </div>
-      <div class="back">
-          Back
-      </div> 
-    </div>
-
-    <div class="card">
-      <div class="front">
-          Front
-      </div>
-      <div class="back">
-          Back
-      </div> 
-    </div>
-
-    <div class="card">
-      <div class="front">
-          Front
-      </div>
-      <div class="back">
-          Back
-      </div> 
-    </div>
-
-    <div class="card">
-      <div class="front">
-          Front
-      </div>
-      <div class="back">
-          Back
-      </div> 
-    </div>
-
-    <div class="card">
-      <div class="front">
-          Front
-      </div>
-      <div class="back">
-          Back
-      </div> 
-    </div>
-
-    <div class="card">
-      <div class="front">
-          Front
-      </div>
-      <div class="back">
-          Back
-      </div> 
-    </div>
-
-    <div class="card">
-      <div class="front">
-          Front
-      </div>
-      <div class="back">
-          Back
-      </div> 
-    </div>
-
-    <div class="card">
-      <div class="front">
-          Front
-      </div>
-      <div class="back">
-          Back
-      </div> 
-    </div>
-
-    <div class="card">
-      <div class="front">
-          Front
-      </div>
-      <div class="back">
-          Back
-      </div> 
-    </div>
-
-    <div class="card">
-      <div class="front">
-          Front
-      </div>
-      <div class="back">
-          Back
-      </div> 
-    </div>
-
-    <div class="card">
-      <div class="front">
-          Front
-      </div>
-      <div class="back">
-          Back
-      </div>  -->
+</div>
 <!-- Script to turn the Cards. -->
 <script type="text/javascript">
   $(function(){
