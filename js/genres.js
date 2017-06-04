@@ -56,3 +56,43 @@ window.onload = function() {
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #4E6537; opacity:0.5;";
     document.body.appendChild(css);
 };
+
+/* Model. */
+function openModel(event, name, modelName) {
+    // Get the modal
+    var modal = document.getElementById(modelName);
+
+    // Get the image that opens the modal
+    var btn = document.getElementById(name);
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // Ppen the modal 
+    modal.style.display = "block";
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+    }   
+}
+
+/* Spoilers Tag. */
+function spoiler(splId) {
+    var spl = document.getElementById(splId);
+    if(spl.style.display=='none') {
+        spl.style.display=''
+    } else {
+        spl.style.display='none'
+    }
+}
+
+
+
