@@ -139,19 +139,23 @@ body {
 
 /* Modal Content */
 .modal-content {
+  width: 700px;
+  max-width: 100%;
+  height: 400px;
+  max-height: 100%;
   position: relative;
   background-color: #fefefe;
   margin: auto;
   padding: 0;
   border: 1px solid #dc95a0;
-  width: 68%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
   animation-duration: 0.4s;
   font-family: Nunito;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   border-radius: 10px;
 }
 
@@ -189,9 +193,15 @@ body {
 }
 
 .modal-body {
-  padding: 2px 16px;
+  top: 0;
+  left: 0;
+  width: 650px;
+  height: auto;
+  padding: 2px;
+  padding-left: 25px;
   color: black;
   font-size: 0.9em;
+  
 }
 
 .modal-footer {
@@ -204,6 +214,11 @@ body {
 .spoilertext {
   color: black;
   padding: 2px 2px 3px 2px;
+}
+
+/* modal text formatting. */
+.default {
+  color:black;
 }
 </style>
 
@@ -241,6 +256,7 @@ body {
     <p style="margin-bottom: 50px;padding-right: 100px; font-family: Bubbler One; font-size: 2em;">Below are a list of novels I would recommend reading. Click on a novel to see my review. <br><br> Note: Currently there are only reviews available for a few of the novels. Additionally, I am not the translator nor am I the author of any of these novels. Please Enjoy!</p>
     <input type="image" src="../img/novels/TPWY.jpg" class="novel" onclick="openModel(event, 'btn1', 'm1')" id="btn1"/>   
     <input type="image" src="../img/novels/MWFRL.jpg" class="novel" onclick="openModel(event, 'btn2', 'm2')" id="btn2"/>
+    <input type="image" src="../img/novels/TMR.jpg" class="novel" onclick="openModel(event, 'btn14', 'm14')" id="btn14"/>    
     <input type="image" src="../img/novels/eewc.jpg" class="novel" onclick="openModel(event, 'btn2', 'm3')" id="btn3"/>
     <input type="image" src="../img/novels/ASSIVC.jpg" class="novel" onclick="openModel(event, 'btn4', 'm4')" id="btn4"/>
     <input type="image" src="../img/novels/BIB.jpg" class="novel" onclick="openModel(event, 'btn5', 'm5')" id="btn5"/>
@@ -266,10 +282,12 @@ body {
         <h3>Jian Qin (秦简)</h3>
       </div>
       <div class="modal-body">
-        <p style="color:black;">
+        <p class="default">
         <br>
-        Rating: &starf;&starf;&starf;&starf;&star;
+        <b class="default">Rating:</b> &starf;&starf;&starf;&starf;&star;
         <br>
+        <b class="default">Tags:</b> Historical, Romance, Monogamy, Business, Slice of Life, Drama, Psychological, Time Travel, Politics, Scheming, Female Protagonist        
+        <br><br>
         This story was definitely a unique read. I felt that it was different from many of its similar novels like Chu Wang Fei, Chongfei Manual in that the main character was a concubine's daughter, that too one with no background, so there'd definitely more scheming and more plotting.
         <br><br>
         Basically, the main character, after dying and losing everyone important to her in a heart wrenching manner due to her insensitive husband, gets a chance to do do-over. This time, armed with her experience and knowledge from her previous life ends up avoiding falling in the same traps as before.
@@ -277,15 +295,18 @@ body {
         Get ready for blatant unbiased treatment from her so-called father, his main wife and kids and intense scheming.
         <br><br>
         <button title="to click" class="spoilertext" onclick="spoiler('spl1')">Spoiler</button>
-        <div id="spl1" style="display:none;color:black;">
+        <div id="spl1" style="display:none;color:black;padding-left: 20px;padding-right: 35px;">
+        <br>
           She manages to protect and save everyone important to her while getting revenge on those who had wronged her in her previous life - i.e. her step-sister, her ex-husband, main wife, etc.
           <br><br>
           I'd have to say her revenge, while gruesome and brutal, is satisfying even to the reader, after reading the emotional scenes and trauma she experienced in her previous life. Though I do agree that her revenge brings up many questions - How justified is she for hating on characters who seem innocent so far in this timeline? Is it possible that her actions are just bringing about unnecessary animosity and enemies?
+          <br>
         </div><br>
         Beware: Don't be like me and jump on the wrong ship. The male lead is the most unlikely person until you figure out who it is.
         <br><br>
         <button title="to click" class="spoilertext" onclick="spoiler('spl2')">Spoiler</button>
-        <div id="spl2" style="display:none;color:black;">
+        <div id="spl2" style="display:none;color:black;padding-left: 20px;padding-right: 35px;">
+        <br>
           Hint, hint. It's her 3rd "brother", Li Min De. In all honesty, once you become aware of the circumstances surrounding the mysterious "adopted" son of San Furen, everything seems to click together better and the two them end up making such an adorable power couple.</div>
         <br><br>
         </p>
@@ -306,10 +327,12 @@ body {
         <h3>Chestnut (Ban Li Zi / 板栗子)</h3>
       </div>
       <div class="modal-body">
-        <p style="color:black;">
+        <p class="default">
         <br>
-        Rating: &starf;&starf;&starf;&starf;&starf;
+        <b class="default">Rating:</b> &starf;&starf;&starf;&starf;&starf;
         <br>
+        <b class="default">Tags:</b> Comedy, Romance, Monogamy, Happy Ending, Business, Slice of Life, Drama, Female Protagonist 
+        <br><br>
         This book like Chestnut's other novels, Just Blame Me For Being Blind in the Beginning, is cute and good read. There is one clear male lead and female lead, no potentially ambiguous relationships or misunderstandings that take forever to resolve (although there are times when the couple fights). It is simple, cute and definitely a good read!
         <br><br>
         I find that the characters in Chestnut's novels are very well rounded and that even side-characters have a good characterization. I found myself laughing, aw-ing and rooting for the both the main and side characters!
@@ -317,19 +340,70 @@ body {
         Short Summary:
         <br>
         <button title="to click" class="spoilertext" onclick="spoiler('spl3')">Spoiler</button>
-        <div id="spl3" style="display:none;color:black;">
+        <div id="spl3" style="display:none;color:black;padding-left: 20px;padding-right: 35px;">
+        <br>
           The story follows Jian Yan, a manhua artist who is obsessed with money and has misandry due to a bad experience younger (her father has debts). Though she has released a huge seller and can easily bank on that alone, being a workaholic that she is, during her break, she decides to work as a sale representative at a clothes department store. This is where the male lead comes in, as he is the Manager of the store and this fashion company.
           <br><br>
           Initially, both sides hid their other identity. MC - a manhua artist, ML - a super popular singer named Nan Si. However both sides eventually eventually discover each other's identities (while they are in the process of falling in love).
           <br><br>
           We have the main lead's identity which set the plot for the most of second half, as his father left his mother to marry a rich girl, who gives birth to the ML's step brother.
+          <br>
         </div><br>
         The most surprising twist was the change in the step-brother, because
         <br>
         <button title="to click" class="spoilertext" onclick="spoiler('spl4')">Spoiler</button>
-        <div id="spl4" style="display:none;color:black;">
+        <div id="spl4" style="display:none;color:black;padding-left: 20px;padding-right: 35px;">
+        <br>
           we find out that he actually likes his brother, as he always wanted a brother. However, his mother, jealous of him and the fact that her husband seems to favor the other son, instills in him that the ML is a mistress' son. That and the ML's indifferent personality seems to push the brother to behave badly. Once you read the side story at the end, all his actions and rudeness just seem like a ploy to get attention from his brother o(≧▽≦)o ~
         </div>
+        <br><br>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Transmigrator Meets Reincarnator Model. -->
+  <div id="m14" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Transmigrator Meets Reincarnator (穿越女遇到重生男)</h2>
+        <h3> Xue Shan Lan (雪山岚)</h3>
+      </div>
+      <div class="modal-body">
+        <p class="default">
+        <br>
+        <b class="default">Rating:</b> &starf;&starf;&starf;&starf;&star;
+        <br>
+        <b class="default">Tags:</b> Historical, Comedy, Romance, Time Travel/Reincarnation, Transmigration, Monogamy, Happy Ending, Scheming, Female Protagonist 
+        <br><br>
+        Definitely a novel I would reccomend. Unlike most novels that fall into this category, we see several twists in the story. 
+        <br><br>
+        One, not only is Chu Lian, the Main Character (MC), a transmigrator who ends waking up as the protagonist of the book that was reading, He Changdi, the male lead (ML) and her husband, is also one (we can infer this pretty early into this novel). 
+        <br>
+        <button title="to click" class="spoilertext" onclick="spoiler('spl5')">Spoiler</button>
+        <div id="spl5" style="display:none;color:black;padding-left: 20px;padding-right: 35px;">
+        <br>
+          Two, the original Chu Lian (who betrays He Changdi in the previous timeline) also reincarnates, but as a servant.
+          <br>
+        </div>
+        <br>
+        Yes, that's right. A transmigrator and TWO reincarnators. 
+        <br><br>
+        To put the setting into context, in the previous timeline, Chu Lian ends up betrayed her husband He Changdi and brings his downfall for her lover, Xiao Wujing (aka Xiao Bojian). As a result, once reincarnated, He Changdi, not realizing that this timeline's Chu Lian is not the same as the other spurns and leaves her to join the military. It is not until late into the series that they literally stumble upon each other. 
+        <br><br>
+        In my opinion, this story is definitely a must-read. It is served with comedy, romance and a side-dish of schemes. The male lead is not really present in the first half, so there isn't much romance, but there is instead a lot of character development and the MC putting her skills to good use. One definite plus point about this novel is that even after the MC and ML get together, the MC still has her moments where she shines. Overall, Although the initial misunderstanding drives the couple to be separated, it is much more beautiful to see them meet and slowly fall in love with each other. This and effective communication led to the perfect relationship. Although they are not without their fair share of troubles, they quickly resolve them.
+        <br><br>
+        One point that I disliked was the lack of exploration about certain crucial details about the plot. It is implied in the novel that the MC has a special origin, but there is barely enough development in this direction, even though this ends up being a major factor in the final arc. Despite this, I definitely stand by my point that this was an overall fluffy novel with minimal schemes that was surprisingly satisfying. 
+        <br><br>
+        As for the real Chu Lian (from the previous timeline)...
+        <br>
+        <button title="to click" class="spoilertext" onclick="spoiler('spl6')">Spoiler</button>
+        <div id="spl6" style="display:none;color:black;padding-left: 20px;padding-right: 35px;">
+        <br>
+          We find out towards the end that in the previous timeline she had been thoroughly manipulated by Xiao Wujing because of her background - she is the illegitimate daughter of the current Emperor. In the end, once Xiao Wujing was done using her, he ends up getting rid of her. She only ends up finding out her origins and that she had been fed medicine that prevented her from getting pregnant at the end. Seeing how well the MC was living (MC had also gotten pregnant), she ends up getting jealous and tries to kill the MC. Of course, our hero, He Changdi saves the day!
+        </div>        
         <br><br>
         </p>
       </div>
